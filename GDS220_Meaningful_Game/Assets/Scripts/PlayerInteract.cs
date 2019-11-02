@@ -18,17 +18,21 @@ public class PlayerInteract : MonoBehaviour
     void BerryBush()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range, layerMask) && lookingAt.berryBPicked == false)
+        if (Physics.Raycast(transform.position, transform.forward, out hit, range, layerMask))
         {
             Debug.Log("Looking at Berry Bush");
-            text.enabled = true;
 
             lookingAt = hit.collider.gameObject.GetComponent<InteractableManager>();
 
+            if(lookingAt.lookedAt == false)
+            {
+                text.enabled = true;
+            }
+
             if (hit.collider.gameObject.GetComponent<InteractableManager>() != null && Input.GetButtonDown("Interact"))
             {
-                hit.collider.gameObject.GetComponent<InteractableManager>().lookedAt = true;
-                hit.collider.gameObject.GetComponent<InteractableManager>().berryBPicked = true;
+                lookingAt.lookedAt = true;
+                text.enabled = false;
                 Debug.Log("working");
             }
             else

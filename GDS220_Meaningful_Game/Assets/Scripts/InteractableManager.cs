@@ -6,7 +6,6 @@ public class InteractableManager : MonoBehaviour
 {
     public GameObject berries;
     public bool lookedAt;
-    public bool berryBPicked = false;
 
     void Update()
     {
