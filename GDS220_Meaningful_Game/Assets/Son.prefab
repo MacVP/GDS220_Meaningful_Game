@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7148427745464269046}
   - component: {fileID: 7148427745464269041}
   - component: {fileID: 7148427745464269040}
-  - component: {fileID: 1474871118210707784}
+  - component: {fileID: -8566512233455788186}
   m_Layer: 0
   m_Name: Son
   m_TagString: Untagged
@@ -79,18 +79,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!111 &1474871118210707784
-Animation:
+--- !u!95 &-8566512233455788186
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7148427745464269053}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 76c1564ecefcafb4abb856787d56cb74, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45d60441d335d3b4f8a622ec2d7cde98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

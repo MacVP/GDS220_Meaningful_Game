@@ -9,13 +9,14 @@ public class PlayerInteract : MonoBehaviour
     public LayerMask layerMask;
     public Text text;
     private InteractableManager lookingAt;
+    public int berriesPicked;
 
     void Update()
     {
-        BerryBush();
+        Interact();
     }
 
-    void BerryBush()
+    void Interact()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, range, layerMask))
@@ -24,24 +25,30 @@ public class PlayerInteract : MonoBehaviour
 
             lookingAt = hit.collider.gameObject.GetComponent<InteractableManager>();
 
+            //For Berry Bushes
             if(lookingAt.lookedAt == false)
             {
+                //"E" Pick Berry
                 text.enabled = true;
             }
 
             if (hit.collider.gameObject.GetComponent<InteractableManager>() != null && Input.GetButtonDown("Interact"))
             {
+                //Stops text from appearing if berries have been picked
                 lookingAt.lookedAt = true;
                 text.enabled = false;
                 Debug.Log("working");
+                berriesPicked++;
             }
             else
             {
+                //Null check
                 Debug.Log("No Script");               
             }
         }
         else
         {
+            //Don't display text when not looking at the berry bush
             text.enabled = false;
         }
     }

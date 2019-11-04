@@ -14,6 +14,7 @@ public class InteractableManager : MonoBehaviour
 
     void PickBerry()
     {
+        //Pick up berries
         if(lookedAt == true)
         {
             Debug.Log("Picked Berries");
