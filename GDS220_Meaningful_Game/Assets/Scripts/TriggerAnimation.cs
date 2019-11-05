@@ -18,10 +18,18 @@ public class TriggerAnimation : MonoBehaviour
         //Animation trigger
         if (other.CompareTag("Player"))
         {
-            son.SetActive(true);
-            Debug.Log("Son Trigger");
-            moveSon.SetTrigger("AroundCorner");
-            Invoke("Destroy", 5);
+            if(gameObject.name == "SonTrigger")
+            {
+                son.SetActive(true);
+                Debug.Log("Son Trigger");
+                moveSon.SetTrigger("AroundCorner");
+                Invoke("Destroy", 5);
+            }
+
+            if (gameObject.name == "TeddyBear")
+            {
+
+            }
         }
     }
 

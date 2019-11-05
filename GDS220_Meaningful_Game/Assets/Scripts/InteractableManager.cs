@@ -5,20 +5,20 @@ using UnityEngine;
 public class InteractableManager : MonoBehaviour
 {
     public GameObject berries;
+    public GameObject teddyBear;
     public bool lookedAt;
 
-    void Update()
-    {
-        PickBerry();
-    }
-
-    void PickBerry()
+    public void PickBerry()
     {
         //Pick up berries
-        if(lookedAt == true)
-        {
-            Debug.Log("Picked Berries");
-            berries.SetActive(false);
-        }
+        Debug.Log("Picked Berries");
+        berries.SetActive(false);
+    }
+
+    public void TakeTeddyBear()
+    {
+        //Pick up Teddy Bear
+        Debug.Log("Teddy Picked Up");
+        teddyBear.SetActive(false);
     }
 }

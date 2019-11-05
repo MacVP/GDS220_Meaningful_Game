@@ -7,8 +7,10 @@ public class PlayerInteract : MonoBehaviour
 {
     public float range = 3;
     public LayerMask layerMask;
-    public Text text;
+    public Text berryBText;
+    public Text inspectText;
     private InteractableManager lookingAt;
+    public GameObject interactable;
     public int berriesPicked;
 
     void Update()
@@ -23,22 +25,43 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Looking at Berry Bush");
 
-            lookingAt = hit.collider.gameObject.GetComponent<InteractableManager>();
+            interactable = hit.collider.gameObject;
+            lookingAt = interactable.GetComponent<InteractableManager>();
 
-            //For Berry Bushes
-            if(lookingAt.lookedAt == false)
-            {
-                //"E" Pick Berry
-                text.enabled = true;
-            }
 
-            if (hit.collider.gameObject.GetComponent<InteractableManager>() != null && Input.GetButtonDown("Interact"))
+
+            if (lookingAt != null)
             {
-                //Stops text from appearing if berries have been picked
-                lookingAt.lookedAt = true;
-                text.enabled = false;
-                Debug.Log("working");
-                berriesPicked++;
+                if(interactable.name == "BerryBush")
+                {
+                    //For Berry Bushes
+                    if (lookingAt.lookedAt == false)
+                    {
+                        //"E" Pick Berry
+                        berryBText.enabled = true;
+                    }
+
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        //Stops text from appearing if berries have been picked
+                        lookingAt.lookedAt = true;
+                        lookingAt.PickBerry();
+                        berryBText.enabled = false;
+                        Debug.Log("working");
+                        berriesPicked++;
+                    }
+                }
+
+                if(interactable.name == "TeddyBear")
+                {
+                    Debug.Log("Looking At Teddy Bear");
+                    inspectText.enabled = true;
+
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        lookingAt.TakeTeddyBear();
+                    }
+                }
             }
             else
             {
@@ -49,7 +72,8 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             //Don't display text when not looking at the berry bush
-            text.enabled = false;
+            berryBText.enabled = false;
+            inspectText.enabled = false;
         }
     }
 }
