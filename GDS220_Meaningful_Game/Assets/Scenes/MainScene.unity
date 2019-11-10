@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientSkyColor: {r: 0.6415094, g: 0.08170167, b: 0.08613897, a: 1}
+  m_AmbientEquatorColor: {r: 1, g: 0.374343, b: 0, a: 1}
+  m_AmbientGroundColor: {r: 1, g: 0.7337059, b: 0, a: 1}
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.36291692, g: 0.5661692, b: 0.843711, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -50,7 +50,7 @@ LightmapSettings:
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
-    m_EnvironmentLightingMode: 0
+    m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -189,6 +194,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9c8b3ae07751e47bede573de9de6e3, type: 3}
+--- !u!1 &14387419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14387421}
+  - component: {fileID: 14387420}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &14387420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14387419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc981dd6238a734fb35f08408ef964a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: PsychosisTest
+    clip: {fileID: 0}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &14387421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14387419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 163.2595, y: -18.53203, z: 121.85187}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &33655624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -269,6 +333,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
@@ -436,6 +505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Fence_1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
@@ -954,6 +1028,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1028,6 +1112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -1104,6 +1193,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 401700528}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &125922010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125922011}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &125922011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125922010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071705274}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &126311305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1115,6 +1234,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965160224420385652, guid: 262c3c3147eab2b419e6097ff39647ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965160224420385652, guid: 262c3c3147eab2b419e6097ff39647ac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1965160224420155220, guid: 262c3c3147eab2b419e6097ff39647ac,
         type: 3}
@@ -1200,6 +1329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1275,6 +1409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_5
       objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1343,6 +1482,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
@@ -1418,6 +1567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
@@ -1515,6 +1674,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1583,6 +1747,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
@@ -1884,6 +2058,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1980,6 +2164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7389663804759029303, guid: f3d232c96c2c17646884f1d7009d6103,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7389663804759386647, guid: f3d232c96c2c17646884f1d7009d6103,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2066,6 +2255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -2246,6 +2440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2327,6 +2526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2402,6 +2606,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_4
       objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2459,6 +2673,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502c42c9baeb67f42911f3fa9163cb77, type: 3}
+--- !u!1 &397295949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397295950}
+  m_Layer: 0
+  m_Name: Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397295950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397295949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071705274}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &401700528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2690,6 +2934,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7909877621240118510, guid: ff5489413157a604888d0381536e1312,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7909877621240078542, guid: ff5489413157a604888d0381536e1312,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2763,6 +3012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 862934354114562084, guid: 8600d2622ec3d694191f50c7170e98e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 862934354114728964, guid: 8600d2622ec3d694191f50c7170e98e9,
         type: 3}
@@ -2978,6 +3232,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3046,6 +3305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -3127,6 +3391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -3215,6 +3484,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_5
       objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3299,6 +3578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3368,6 +3652,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3436,6 +3725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
@@ -3599,6 +3893,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
@@ -3789,6 +4093,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3864,6 +4178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_7
       objectReference: {fileID: 0}
+    - target: {fileID: 7995292243594950869, guid: 7216d1b3ed926a44b9f99780a651423c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7995292243595240693, guid: 7216d1b3ed926a44b9f99780a651423c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3932,6 +4251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_7 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995292243594950869, guid: 7216d1b3ed926a44b9f99780a651423c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7995292243595240693, guid: 7216d1b3ed926a44b9f99780a651423c,
         type: 3}
@@ -4019,6 +4343,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689859, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7728416778906336611, guid: 27005f85ee945914a9e9c5b61587c022,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4089,6 +4418,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.17
       objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689857, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689861, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689863, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689865, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689869, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728416778906689871, guid: 27005f85ee945914a9e9c5b61587c022,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27005f85ee945914a9e9c5b61587c022, type: 3}
 --- !u!1001 &702180994
@@ -4102,6 +4461,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
@@ -4295,7 +4664,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4305,7 +4674,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.75
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -4341,7 +4710,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.018e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4427,6 +4796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927304084007660920, guid: c8f035af12a03544b8faf019b809e23e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1927304084007170392, guid: c8f035af12a03544b8faf019b809e23e,
         type: 3}
@@ -4654,6 +5028,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4738,6 +5122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_7 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7995292243594950869, guid: 7216d1b3ed926a44b9f99780a651423c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7995292243595240693, guid: 7216d1b3ed926a44b9f99780a651423c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4795,6 +5184,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7216d1b3ed926a44b9f99780a651423c, type: 3}
+--- !u!1 &800047619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800047620}
+  m_Layer: 0
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800047620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800047619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071705274}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &801827129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
@@ -4911,6 +5330,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4992,6 +5416,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5067,6 +5501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5135,6 +5574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Fence_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909877621240118510, guid: ff5489413157a604888d0381536e1312,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7909877621240078542, guid: ff5489413157a604888d0381536e1312,
         type: 3}
@@ -5280,6 +5724,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5348,6 +5802,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Log (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907206377290718926, guid: 770c60ef082a25745aedcd601ba291cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1907206377290482414, guid: 770c60ef082a25745aedcd601ba291cd,
         type: 3}
@@ -5432,6 +5891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Fence_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
@@ -5671,6 +6135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Fence_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909877621240118510, guid: ff5489413157a604888d0381536e1312,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7909877621240078542, guid: ff5489413157a604888d0381536e1312,
         type: 3}
@@ -5960,6 +6429,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6075,6 +6554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6143,6 +6627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
@@ -6213,6 +6702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6282,6 +6776,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Stump
       objectReference: {fileID: 0}
+    - target: {fileID: 4840969982447336278, guid: 2bf4ea6fcd1548e40b538beaaafca927,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4840969982447560566, guid: 2bf4ea6fcd1548e40b538beaaafca927,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6350,6 +6849,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
@@ -6434,6 +6943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -6603,6 +7117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Log
       objectReference: {fileID: 0}
+    - target: {fileID: 1907206377290718926, guid: 770c60ef082a25745aedcd601ba291cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1907206377290482414, guid: 770c60ef082a25745aedcd601ba291cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6675,6 +7194,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770c60ef082a25745aedcd601ba291cd, type: 3}
+--- !u!1 &1071705273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071705274}
+  m_Layer: 0
+  m_Name: Psychosis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1071705274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071705273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1426933668}
+  - {fileID: 125922011}
+  - {fileID: 800047620}
+  - {fileID: 397295950}
+  m_Father: {fileID: 60044379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1077284950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6686,6 +7239,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
@@ -6852,6 +7415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5634603583677927666, guid: 14ab49b838bdc0141b4f176dbef46ee5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5634603583677893842, guid: 14ab49b838bdc0141b4f176dbef46ee5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6920,6 +7488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389663804759029303, guid: f3d232c96c2c17646884f1d7009d6103,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7389663804759386647, guid: f3d232c96c2c17646884f1d7009d6103,
         type: 3}
@@ -7002,6 +7575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7071,6 +7649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7139,6 +7722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
@@ -7219,6 +7807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927304084007660920, guid: c8f035af12a03544b8faf019b809e23e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1927304084007170392, guid: c8f035af12a03544b8faf019b809e23e,
         type: 3}
@@ -7855,6 +8448,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7982,6 +8585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927304084007660920, guid: c8f035af12a03544b8faf019b809e23e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1927304084007170392, guid: c8f035af12a03544b8faf019b809e23e,
         type: 3}
@@ -8215,6 +8823,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7995292243594950869, guid: 7216d1b3ed926a44b9f99780a651423c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7995292243595240693, guid: 7216d1b3ed926a44b9f99780a651423c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8283,6 +8896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
@@ -8367,6 +8985,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
@@ -8458,6 +9086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1965160224420385652, guid: 262c3c3147eab2b419e6097ff39647ac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1965160224420155220, guid: 262c3c3147eab2b419e6097ff39647ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8526,6 +9159,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
@@ -8611,6 +9254,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 369306408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1426933667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426933668}
+  m_Layer: 0
+  m_Name: Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426933668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426933667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071705274}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1442067434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
@@ -8847,6 +9520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
@@ -9163,6 +9841,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9231,6 +9914,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670253647556628767, guid: c72c5be8b2472624c816b1656e1ffc78,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6670253647556398399, guid: c72c5be8b2472624c816b1656e1ffc78,
         type: 3}
@@ -9440,6 +10133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9593,6 +10291,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9667,6 +10375,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219435761877879911, guid: b1f11e4f2bea98349a9a055c2894acd3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8219435761877389383, guid: b1f11e4f2bea98349a9a055c2894acd3,
         type: 3}
@@ -9824,6 +10542,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9892,6 +10615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -9962,6 +10690,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10030,6 +10768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
@@ -10121,6 +10864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Box
       objectReference: {fileID: 0}
+    - target: {fileID: 7389663804759029303, guid: f3d232c96c2c17646884f1d7009d6103,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7389663804759386647, guid: f3d232c96c2c17646884f1d7009d6103,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10189,6 +10937,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Fence_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397145078013613923, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3397145078013119299, guid: e83ccfa2a3880db4da5bc2ff5ac40244,
         type: 3}
@@ -10271,6 +11024,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Fence_4
       objectReference: {fileID: 0}
+    - target: {fileID: 3260883754279662344, guid: 122eeb163efabb14380e477451d80a37,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3260883754279366440, guid: 122eeb163efabb14380e477451d80a37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10345,6 +11103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Log (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907206377290718926, guid: 770c60ef082a25745aedcd601ba291cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1907206377290482414, guid: 770c60ef082a25745aedcd601ba291cd,
         type: 3}
@@ -10435,6 +11198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -10588,6 +11356,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 429913205243934611, guid: 789118d294fed484895906a038384d68,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 429913205244423091, guid: 789118d294fed484895906a038384d68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10681,6 +11454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824397869953467014, guid: 64070771912d7864d852cd4b5c498495,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3824397869953179302, guid: 64070771912d7864d852cd4b5c498495,
         type: 3}
@@ -10776,6 +11554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -11184,6 +11967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11484,6 +12272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Log (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1907206377290718926, guid: 770c60ef082a25745aedcd601ba291cd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1907206377290482414, guid: 770c60ef082a25745aedcd601ba291cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11667,6 +12460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043424379810362425, guid: a01074b22d9a2a740a66995dde45a5f8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4043424379810850841, guid: a01074b22d9a2a740a66995dde45a5f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11751,6 +12549,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Rock_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661553751848255727, guid: 0e16edab178650e4dac52759a955935a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5661553751848492239, guid: 0e16edab178650e4dac52759a955935a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11826,6 +12634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FHE_Chopped_Logs_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594711881584590900, guid: 54f33dda273473743ae644f92a186f36,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8594711881584368660, guid: 54f33dda273473743ae644f92a186f36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11900,6 +12713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Chopped_Logs_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756167828670159262, guid: 4c9c8b3ae07751e47bede573de9de6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4756167828669793726, guid: 4c9c8b3ae07751e47bede573de9de6e3,
         type: 3}
@@ -11987,6 +12805,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FHE_Rock_4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934082693822476517, guid: 502c42c9baeb67f42911f3fa9163cb77,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6934082693822901445, guid: 502c42c9baeb67f42911f3fa9163cb77,
         type: 3}
@@ -12178,6 +13006,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3620765759225263578, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620765759225263578, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1551077294758855649, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -12191,7 +13029,7 @@ PrefabInstance:
     - target: {fileID: 3620765759456893882, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 148.44
+      value: 152.67
       objectReference: {fileID: 0}
     - target: {fileID: 3620765759456893882, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
@@ -12201,7 +13039,7 @@ PrefabInstance:
     - target: {fileID: 3620765759456893882, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 141.66
+      value: 136.92
       objectReference: {fileID: 0}
     - target: {fileID: 3620765759456893882, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
@@ -12247,16 +13085,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620765759225263578, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620765759225263578, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3620765758302700875, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}

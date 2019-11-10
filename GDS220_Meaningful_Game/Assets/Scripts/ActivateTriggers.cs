@@ -10,6 +10,7 @@ public class ActivateTriggers : MonoBehaviour
     void Awake()
     {
         playerIntr = FindObjectOfType<PlayerInteract>();
+        Application.targetFrameRate = 60;
     }
 
     void Start()
