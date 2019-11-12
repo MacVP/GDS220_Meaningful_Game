@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivateTriggers : MonoBehaviour
 {
     public GameObject sonTrigger1;
-    private PlayerInteract playerIntr;
+    public PlayerInteract playerIntr;
 
     void Awake()
     {

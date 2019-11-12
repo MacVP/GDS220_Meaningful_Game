@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableManager : MonoBehaviour
 {
+    public SceneManagement sceneManagement;
+
     public GameObject berries;
     public GameObject teddyBear;
     public bool lookedAt;
@@ -20,5 +22,6 @@ public class InteractableManager : MonoBehaviour
         //Pick up Teddy Bear
         Debug.Log("Teddy Picked Up");
         teddyBear.SetActive(false);
+        sceneManagement.PyreScene();
     }
 }
