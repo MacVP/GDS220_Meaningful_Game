@@ -6,17 +6,21 @@ public class Psychosis : MonoBehaviour
 {
     public GameObject[] voicePos;
 
-    private GameObject front;
-    private GameObject back;
-    private GameObject right;
     private GameObject left;
+    private GameObject rightFront;
+    private GameObject right;
+    private GameObject leftFront;
+    private GameObject leftBack;
+    private GameObject rightBack;
 
     void Awake()
     {
-        front = voicePos[0];
-        back = voicePos[1];
-        right = voicePos[2];
-        left = voicePos[3];
+        left = voicePos[0];
+        right = voicePos[1];
+        rightFront = voicePos[2];
+        leftBack = voicePos[3];
+        leftFront = voicePos[4];
+        rightBack = voicePos[5];
     }
 
     void Update()
@@ -34,24 +38,34 @@ public class Psychosis : MonoBehaviour
             audio.Play();
         }
 
-        if (Input.GetButtonDown("AudioTestF"))
+        if (Input.GetButtonDown("Left"))
         {
-            front.GetComponent<AudioSource>().Play();
+            left.GetComponent<AudioSource>().Play();
         }
 
-        if (Input.GetButtonDown("AudioTestB"))
-        {
-            back.GetComponent<AudioSource>().Play();
-        }
-
-        if (Input.GetButtonDown("AudioTestR"))
+        if (Input.GetButtonDown("Right"))
         {
             right.GetComponent<AudioSource>().Play();
         }
 
-        if (Input.GetButtonDown("AudioTestL"))
+        if (Input.GetButtonDown("RightFront"))
         {
-            left.GetComponent<AudioSource>().Play();
+            rightFront.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetButtonDown("LeftBack"))
+        {
+            leftBack.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetButtonDown("LeftFront"))
+        {
+            leftFront.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetButtonDown("RightBack"))
+        {
+            rightBack.GetComponent<AudioSource>().Play();
         }
     }
 }

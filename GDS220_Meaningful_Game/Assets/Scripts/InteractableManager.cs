@@ -6,9 +6,12 @@ public class InteractableManager : MonoBehaviour
 {
     public SceneManagement sceneManagement;
 
+    public GameObject player;
     public GameObject berries;
     public GameObject teddyBear;
     public bool lookedAt;
+
+    public Vector3 startPoint;
 
     public void PickBerry()
     {
@@ -22,6 +25,6 @@ public class InteractableManager : MonoBehaviour
         //Pick up Teddy Bear
         Debug.Log("Teddy Picked Up");
         teddyBear.SetActive(false);
-        sceneManagement.PyreScene();
+        player.transform.position = startPoint;
     }
 }
