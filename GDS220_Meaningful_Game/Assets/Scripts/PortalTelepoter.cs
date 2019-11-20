@@ -30,7 +30,7 @@ public class PortalTelepoter : MonoBehaviour
                 player.position = reciever.position + positionOffset;
                 playerIsOverlapping = false;
 
-                Debug.Log("Teleported");
+                //Debug.Log("Teleported");
             }
         }
     }

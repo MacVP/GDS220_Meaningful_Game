@@ -10,6 +10,7 @@ public class TriggerManager : MonoBehaviour
 
     void Awake()
     {
+        //null checks
         if(son != null)
         {
             moveSon = son.GetComponent<Animator>();
@@ -35,6 +36,7 @@ public class TriggerManager : MonoBehaviour
         //Animation trigger
         if (other.CompareTag("Player"))
         {
+            //Trigger animation of son walking around house
             if(gameObject.name == "SonTrigger")
             {
                 son.SetActive(true);
@@ -43,11 +45,12 @@ public class TriggerManager : MonoBehaviour
                 Invoke("Destroy", 5);
             }
 
-            if (gameObject.name == "TeddyBear")
-            {
+            //if (gameObject.name == "TeddyBear")
+            //{
 
-            }
+            //}
 
+            //Activating the pyre
             if (gameObject.name == "PyreTrigger")
             {
                 pyre.SetActive(true);
