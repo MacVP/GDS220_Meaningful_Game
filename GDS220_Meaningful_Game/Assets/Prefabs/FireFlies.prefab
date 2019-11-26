@@ -41,14 +41,14 @@ ParticleSystem:
   m_GameObject: {fileID: 987883356722841186}
   serializedVersion: 6
   lengthInSec: 1
-  simulationSpeed: 0.5
+  simulationSpeed: 0.3
   stopAction: 0
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0.5, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 0
+  prewarm: 1
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -3820,9 +3820,9 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
-    light: {fileID: 0}
+    light: {fileID: 3863518800177429851, guid: 6b8dc1cd827a7c34b9c92d215045af58, type: 3}
     randomDistribution: 1
     color: 1
     range: 1
