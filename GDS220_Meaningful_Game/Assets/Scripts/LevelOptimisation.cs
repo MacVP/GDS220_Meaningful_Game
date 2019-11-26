@@ -27,64 +27,39 @@ public class LevelOptimisation : MonoBehaviour
         {
             Level_1A.SetActive(true);
             Level_1B.SetActive(true);
-            Level_1C.SetActive(false);
-            Level_1D.SetActive(false);
-            Level_1E.SetActive(false);
-            Pyre_A.SetActive(false);
-            Pyre_B.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameObject.name == "1B-1C")
         {
-            Level_1A.SetActive(true);
+            Level_1A.SetActive(false);
             Level_1B.SetActive(true);
             Level_1C.SetActive(true);
-            Level_1D.SetActive(false);
-            Level_1E.SetActive(false);
-            Pyre_A.SetActive(false);
-            Pyre_B.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameObject.name == "1C-1D")
         {
-            Level_1A.SetActive(false);
-            Level_1B.SetActive(true);
+            Level_1B.SetActive(false);
             Level_1C.SetActive(true);
             Level_1D.SetActive(true);
-            Level_1E.SetActive(false);
-            Pyre_A.SetActive(false);
-            Pyre_B.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameObject.name == "1D-1E")
         {
-            Level_1A.SetActive(false);
-            Level_1B.SetActive(false);
-            Level_1C.SetActive(true);
+            Level_1C.SetActive(false);
             Level_1D.SetActive(true);
             Level_1E.SetActive(true);
-            Pyre_A.SetActive(false);
-            Pyre_B.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameObject.name == "1E-PyreA")
         {
-            Level_1A.SetActive(false);
-            Level_1B.SetActive(false);
-            Level_1C.SetActive(false);
-            Level_1D.SetActive(true);
+            Level_1D.SetActive(false);
             Level_1E.SetActive(true);
             Pyre_A.SetActive(true);
-            Pyre_B.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameObject.name == "PyreA-PyreB")
         {
-            Level_1A.SetActive(false);
-            Level_1B.SetActive(false);
-            Level_1C.SetActive(false);
-            Level_1D.SetActive(false);
-            Level_1E.SetActive(true);
+            Level_1E.SetActive(false);
             Pyre_A.SetActive(true);
             Pyre_B.SetActive(true);
         }
