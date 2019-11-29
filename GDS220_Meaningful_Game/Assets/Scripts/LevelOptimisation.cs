@@ -59,7 +59,8 @@ public class LevelOptimisation : MonoBehaviour
             Invoke("LevelShow_6", 0.01f);
             return;
         }
-        else
+
+        if (other.CompareTag("Player") && gameObject.name == "PyreB")
         {
             Invoke("LevelShow_7", 0.01f);
             return;
