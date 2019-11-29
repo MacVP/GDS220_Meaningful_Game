@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.4
+    value: 0.65
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -61,13 +61,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 10
+    value: 5
   threshold:
     overrideState: 0
     value: 0.3
@@ -85,7 +85,7 @@ MonoBehaviour:
     value: -1
   color:
     overrideState: 1
-    value: {r: 0, g: 0.17471862, b: 1, a: 1}
+    value: {r: 0.22614807, g: 0.29611757, b: 0.6226415, a: 1}
   fastMode:
     overrideState: 0
     value: 0
