@@ -11,10 +11,6 @@ public class LevelOptimisation : MonoBehaviour
     public GameObject Pyre_A;
     public GameObject Pyre_B;
 
-    public Skybox night;
-    public Skybox sunset;
-    public Skybox day;
-
     private void Start()
     {
         Level_1A.SetActive(true);
@@ -24,8 +20,6 @@ public class LevelOptimisation : MonoBehaviour
         Level_1E.SetActive(false);
         Pyre_A.SetActive(false);
         Pyre_B.SetActive(false);
-
-        RenderSettings.skybox = night;
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,7 +31,7 @@ public class LevelOptimisation : MonoBehaviour
         }
 
         if (other.CompareTag("Player") && gameObject.name == "1B-1C")
-        {
+        {           
             Invoke("LevelShow_2", 0.01f);
             return;
         }
@@ -86,8 +80,6 @@ public class LevelOptimisation : MonoBehaviour
     }
     void LevelShow_3()
     {
-        RenderSettings.skybox = sunset;
-
         Level_1B.SetActive(false);
         Level_1C.SetActive(true);
         Level_1D.SetActive(true);

@@ -15,12 +15,12 @@ public class PortalTelepoter : MonoBehaviour
 
     void Teleport()
     {
-        if(playerIsOverlapping)
+        if (playerIsOverlapping)
         {
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
-            if(dotProduct < 0f)
+            if (dotProduct < 0f)
             {
                 float rotationDiff = -Quaternion.Angle(transform.rotation, reciever.rotation);
                 rotationDiff += 180;
