@@ -3,7 +3,22 @@ guid: 1e47518ccfba2664a93d75171be68540
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillars3
+    second: {fileID: 2100000, guid: d34d111ecc54eb447a475d6e802b3cf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks
+    second: {fileID: 2100000, guid: 1104c981a28713347820fbc3a04a324a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rope
+    second: {fileID: 2100000, guid: d1a141d008cb08b4eb4490dc61000dc3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
