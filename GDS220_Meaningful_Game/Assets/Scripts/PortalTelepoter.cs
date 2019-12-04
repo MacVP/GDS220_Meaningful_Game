@@ -38,7 +38,7 @@ public class PortalTelepoter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-        {
+        { 
             playerIsOverlapping = true;
         }
     }
