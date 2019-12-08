@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PortalTexture : MonoBehaviour
 {
+    public Camera startLevelCamB;
     public Camera lvl1ACamB;
     public Camera lvl1BCamB;
     public Camera lvl1CCamB;
@@ -11,6 +10,7 @@ public class PortalTexture : MonoBehaviour
     public Camera lvl1ECamB;
     public Camera pyreCamB;
 
+    public Material levelStartMatB;
     public Material lvl1AMatB;
     public Material lvl1BMatB;
     public Material lvl1CMatB;
@@ -20,12 +20,23 @@ public class PortalTexture : MonoBehaviour
 
     void Start()
     {
+        StartLevel();
         Lvl1A();
         Lvl1B();
         Lvl1C();
         Lvl1D();
         Lvl1E();
         Pyre();
+    }
+
+    void StartLevel()
+    {
+        if (startLevelCamB.targetTexture != null)
+        {
+            startLevelCamB.targetTexture.Release();
+        }
+        startLevelCamB.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        levelStartMatB.mainTexture = startLevelCamB.targetTexture;
     }
 
     void Lvl1A()

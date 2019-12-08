@@ -14,7 +14,7 @@ public class TriggerManager : MonoBehaviour
         if(son != null)
         {
             moveSon = son.GetComponent<Animator>();
-            son.SetActive(false);
+            //son.SetActive(false);
         }
         else
         {
@@ -42,7 +42,7 @@ public class TriggerManager : MonoBehaviour
                 son.SetActive(true);
                 Debug.Log("Son Trigger");
                 moveSon.SetTrigger("AroundCorner");
-                Invoke("Destroy", 5);
+                Invoke("Destroy", 2);
             }
 
             //if (gameObject.name == "TeddyBear")

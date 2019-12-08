@@ -15,14 +15,6 @@ public class ActivateTriggers : MonoBehaviour
 
     void Start()
     {
-        sonTrigger1.SetActive(false);
-    }
-
-    void Update()
-    {
-        if(playerIntr.berriesPicked >= 5)
-        {
-            sonTrigger1.SetActive(true);
-        }
+        sonTrigger1.SetActive(true);
     }
 }
