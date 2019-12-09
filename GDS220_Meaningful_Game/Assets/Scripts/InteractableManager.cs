@@ -9,9 +9,16 @@ public class InteractableManager : MonoBehaviour
     public GameObject player;
     public GameObject berries;
     public GameObject teddyBear;
+    public GameObject firePortal;
+
     public bool lookedAt;
 
     public Vector3 startPoint;
+
+    private void Start()
+    {
+        firePortal.SetActive(false);
+    }
 
     public void PickBerry()
     {
@@ -25,6 +32,7 @@ public class InteractableManager : MonoBehaviour
         //Pick up Teddy Bear
         Debug.Log("Teddy Picked Up");
         teddyBear.SetActive(false);
+        firePortal.SetActive(true);
         player.transform.position = startPoint;
     }
 }
