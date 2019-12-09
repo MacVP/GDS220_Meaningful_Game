@@ -152,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   son: {fileID: 0}
   pyre: {fileID: 0}
+  mainCamera: {fileID: 0}
+  scareCam: {fileID: 0}
 --- !u!1 &4762177021268368100
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +463,7 @@ Transform:
   - {fileID: 4762177022459650271}
   - {fileID: 4762177021116346212}
   - {fileID: 7017526875729383310}
+  - {fileID: 4502541099752377599}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -851,6 +854,7 @@ MonoBehaviour:
   player: {fileID: 0}
   berries: {fileID: 0}
   teddyBear: {fileID: 4762177022459650270}
+  firePortal: {fileID: 0}
   lookedAt: 0
   startPoint: {x: 0, y: 0, z: 0}
 --- !u!65 &4762177022459650210
@@ -989,6 +993,67 @@ Transform:
   m_Father: {fileID: 4762177021506693701}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8729989996575450938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4502541099752377599}
+  - component: {fileID: 6624019627487687348}
+  - component: {fileID: 6668901894476726628}
+  m_Layer: 0
+  m_Name: ScareTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4502541099752377599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729989996575450938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4762177021506693701}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6624019627487687348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729989996575450938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f037c94a813bd419e1dbfaf45316e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  son: {fileID: 0}
+  pyre: {fileID: 0}
+  mainCamera: {fileID: 0}
+  scareCam: {fileID: 0}
+--- !u!65 &6668901894476726628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729989996575450938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.569524, y: 1, z: 1}
+  m_Center: {x: -0.4042658, y: 7.1421093e-16, z: -0.000000115594716}
 --- !u!1001 &4707902456415213108
 PrefabInstance:
   m_ObjectHideFlags: 0

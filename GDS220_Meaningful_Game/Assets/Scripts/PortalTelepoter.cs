@@ -17,6 +17,11 @@ public class PortalTelepoter : MonoBehaviour
     {
         if (playerIsOverlapping)
         {
+            if (player == null)
+            {
+                return;
+            }
+
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
