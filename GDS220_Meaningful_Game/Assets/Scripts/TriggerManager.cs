@@ -36,7 +36,7 @@ public class TriggerManager : MonoBehaviour
 
         if (pyre != null)
         {
-            pyre.SetActive(false);
+            pyre.SetActive(true);
         }
         else
         {
@@ -68,7 +68,7 @@ public class TriggerManager : MonoBehaviour
             //Activating the pyre
             if (gameObject.name == "PyreTrigger")
             {
-                pyre.SetActive(true);
+                pyre.SetActive(false);
             }
 
             //Jumpscare
