@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TriggerManager : MonoBehaviour
 {
     private LevelOptimisation lvlOP;
+    public AudioManager audioManager;
 
     public GameObject son;
     public GameObject pyre;
@@ -22,6 +23,7 @@ public class TriggerManager : MonoBehaviour
     void Awake()
     {
         lvlOP = FindObjectOfType<LevelOptimisation>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         //null checks
         if(son != null)
@@ -44,6 +46,8 @@ public class TriggerManager : MonoBehaviour
         }
 
         fadeScreen = false;
+
+
     }
 
     private void Update()
@@ -59,6 +63,8 @@ public class TriggerManager : MonoBehaviour
             //Trigger animation of son walking around house
             if(gameObject.name == "SonTrigger")
             {
+                audioManager.Play("Sees_Boy");
+
                 son.SetActive(true);
                 Debug.Log("Son Trigger");
                 moveSon.SetTrigger("AroundCorner");
@@ -77,6 +83,11 @@ public class TriggerManager : MonoBehaviour
                 print("Jumpscare");
                 mainCamera.enabled = false;
                 Invoke("SwitchCams", 2);
+            }
+
+            if (gameObject.name == "Voices_Bear")
+            {
+                audioManager.Play("Voices_Bear");
             }
         }
     }

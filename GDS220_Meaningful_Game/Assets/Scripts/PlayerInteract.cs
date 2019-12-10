@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
+    private AudioManager audioManager;
+
     public float range = 3;
     public LayerMask layerMask;
     public Text berryBText;
@@ -12,6 +14,11 @@ public class PlayerInteract : MonoBehaviour
     private InteractableManager lookingAt;
     public GameObject interactable;
     public int berriesPicked;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     void Update()
     {
@@ -59,6 +66,7 @@ public class PlayerInteract : MonoBehaviour
 
                     if (Input.GetButtonDown("Interact"))
                     {
+                        audioManager.Play("Fire_Portal");
                         lookingAt.TakeTeddyBear();
                     }
                 }

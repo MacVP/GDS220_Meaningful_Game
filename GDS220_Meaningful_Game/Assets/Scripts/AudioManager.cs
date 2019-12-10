@@ -33,10 +33,12 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-    private void Start()
+    public void Start()
     {
         Play("Ambient");
-        Play("Follow");
+        Play("Follow_1");
+        Play("Follow_2");
+        Play("Follow_3");
     }
 
     public void Play(string sound)
