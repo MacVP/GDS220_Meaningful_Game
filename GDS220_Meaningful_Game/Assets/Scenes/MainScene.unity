@@ -92048,7 +92048,7 @@ PrefabInstance:
     - target: {fileID: 3620765759456893883, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
       propertyPath: speed
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3620765758302700875, guid: 9ed083112c5ee9b4f9193f759b71f1a9,
         type: 3}
@@ -93008,7 +93008,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
@@ -93038,7 +93038,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[2].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
@@ -93073,7 +93073,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
@@ -93133,7 +93133,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[5].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
@@ -93153,7 +93153,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[6].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
@@ -93173,7 +93173,7 @@ PrefabInstance:
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
       propertyPath: sounds.Array.data[7].volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034730745632580316, guid: 0512233389fc09044b28144c5e359cfe,
         type: 3}
