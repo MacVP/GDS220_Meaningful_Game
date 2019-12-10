@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InteractableManager : MonoBehaviour
 {
-    private SceneManagement sceneManagement;
     private LevelOptimisation lvlOP;
 
     public GameObject player;
@@ -13,13 +12,10 @@ public class InteractableManager : MonoBehaviour
     public GameObject firePortal;
     public GameObject jumpScare;
 
-    public bool lookedAt;
-
-    public Vector3 startPoint;
+    public bool lookedAt;  
 
     private void Awake()
     {
-        sceneManagement = FindObjectOfType<SceneManagement>();
         lvlOP = FindObjectOfType<LevelOptimisation>();
     }
 
@@ -47,8 +43,7 @@ public class InteractableManager : MonoBehaviour
         Debug.Log("Teddy Picked Up");
         teddyBear.SetActive(false);
         firePortal.SetActive(true);
-        jumpScare.SetActive(true);
-        player.transform.position = startPoint;
+        jumpScare.SetActive(true);      
         lvlOP.StartLevelB();
     }
 }

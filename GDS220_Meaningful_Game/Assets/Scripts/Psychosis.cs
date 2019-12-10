@@ -28,6 +28,11 @@ public class Psychosis : MonoBehaviour
         PsychosisTest();
     }
 
+    void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Ambient");   
+    }
+
     void PsychosisTest()
     {
         if (Input.GetButtonDown("Jump"))

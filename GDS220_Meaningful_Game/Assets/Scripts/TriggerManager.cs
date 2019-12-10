@@ -86,6 +86,7 @@ public class TriggerManager : MonoBehaviour
         var tempColor = blackScreen.color;
         tempColor.a = 1f;
         blackScreen.color = tempColor;
+        player.transform.position = startPoint.transform.position;
         lvlOP.StartLevelStop();
         Invoke("FadeScreen", 3);
     }

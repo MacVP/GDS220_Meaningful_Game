@@ -33,7 +33,13 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	public void Play(string sound)
+    private void Start()
+    {
+        Play("Ambient");
+        Play("Follow");
+    }
+
+    public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)
