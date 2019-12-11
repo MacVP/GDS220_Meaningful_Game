@@ -14,11 +14,15 @@ public class TriggerManager : MonoBehaviour
     public Camera scareCam;
     private Animator moveSon;
 
+    public Text title;
+
     public GameObject player;
     public GameObject startPoint;
     public Image blackScreen;
     private bool fadeScreen;
     private float fadeRate = 0.1f;
+
+    public GameObject pPHolster;
 
     void Awake()
     {
@@ -46,8 +50,6 @@ public class TriggerManager : MonoBehaviour
         }
 
         fadeScreen = false;
-
-
     }
 
     private void Update()
@@ -90,7 +92,63 @@ public class TriggerManager : MonoBehaviour
             {
                 audioManager.Play("Voices_Bear");
             }
+
+            if (gameObject.name == "RocksTrigger")
+            {
+                audioManager.Play("Rocks");
+            }
+
+            if (gameObject.name == "Portal_1")
+            {
+                audioManager.Play("Portal_1");
+            }
+
+            if (gameObject.name == "GoUp")
+            {
+                audioManager.Play("GoUp");
+            }
+
+            if (gameObject.name == "BrokenBridge")
+            {
+                audioManager.Play("BrokenBridge");
+            }
+
+            if (gameObject.name == "GrassChange")
+            {
+                audioManager.Play("GrassChange");
+            }
+
+            if (gameObject.name == "Portal_3")
+            {
+                audioManager.Play("Portal_3");
+            }
+
+            if (gameObject.name == "End")
+            {
+                audioManager.Play("BOOM");
+                audioManager.Play("Violin");
+                audioManager.Play("Suspence");
+                audioManager.Play("End");
+                Invoke("StopEnd", 60);
+            }
         }
+    }
+
+    void StopEnd()
+    {
+        audioManager.Play("BOOM");
+        audioManager.Stop("Violin");
+        audioManager.Stop("Suspence");
+
+        pPHolster.SetActive(false);
+
+        var tempColor = blackScreen.color;
+        tempColor.a = 1f;
+        blackScreen.color = tempColor;
+
+        var tempText = title.color;
+        tempText.a = 1f;
+        title.color = tempText;
     }
 
     void SwitchCams()
@@ -137,8 +195,6 @@ public class TriggerManager : MonoBehaviour
                 //print("FadeScreen = false");
                 fadeScreen = false;
             }
-
-
             blackScreen.color = tempColor;
         }
     }
