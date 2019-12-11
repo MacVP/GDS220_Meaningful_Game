@@ -66,6 +66,7 @@ public class PlayerInteract : MonoBehaviour
 
                     if (Input.GetButtonDown("Interact"))
                     {
+                        audioManager.Play("Suspence");
                         audioManager.Play("Fire_Portal");
                         lookingAt.TakeTeddyBear();
                     }

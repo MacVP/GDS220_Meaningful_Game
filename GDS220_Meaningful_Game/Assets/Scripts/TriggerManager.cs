@@ -81,6 +81,7 @@ public class TriggerManager : MonoBehaviour
             if (gameObject.name == "ScareTrigger")
             {
                 print("Jumpscare");
+                audioManager.Play("Scare");
                 mainCamera.enabled = false;
                 Invoke("SwitchCams", 2);
             }
@@ -94,12 +95,21 @@ public class TriggerManager : MonoBehaviour
 
     void SwitchCams()
     {
+        audioManager.Stop("Suspence");
+        audioManager.Play("BOOM");
+
         var tempColor = blackScreen.color;
         tempColor.a = 1f;
         blackScreen.color = tempColor;
         player.transform.position = startPoint.transform.position;
         lvlOP.StartLevelStop();
-        Invoke("FadeScreen", 3);
+        Invoke("FadeScreen", 9);
+        Invoke("PlayWakeUp", 7);
+    }
+
+    void PlayWakeUp()
+    {
+        audioManager.Play("WakeUp");
     }
 
     void FadeScreen()
@@ -119,7 +129,7 @@ public class TriggerManager : MonoBehaviour
             if (tempColor.a != 0f)
             {
                 //print("Fading");
-                tempColor.a = tempColor.a - 0.009f;
+                tempColor.a = tempColor.a - 0.005f;
             }
 
             if (tempColor.a <= 0f)
