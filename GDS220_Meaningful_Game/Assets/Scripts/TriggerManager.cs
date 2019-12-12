@@ -175,6 +175,13 @@ public class TriggerManager : MonoBehaviour
         var tempText = title.color;
         tempText.a = 1f;
         title.color = tempText;
+
+        Invoke("BackToMenu", 109);
+    }
+
+    void BackToMenu()
+    {
+        sceneChange.EndOfGame();
     }
 
     void SwitchCams()
