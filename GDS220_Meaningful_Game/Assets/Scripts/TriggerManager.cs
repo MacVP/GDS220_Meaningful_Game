@@ -7,6 +7,7 @@ public class TriggerManager : MonoBehaviour
 {
     private LevelOptimisation lvlOP;
     public AudioManager audioManager;
+    private PlayerMovement playerM;
 
     public GameObject son;
     public GameObject pyre;
@@ -26,6 +27,7 @@ public class TriggerManager : MonoBehaviour
 
     void Awake()
     {
+        playerM = FindObjectOfType<PlayerMovement>();
         lvlOP = FindObjectOfType<LevelOptimisation>();
         audioManager = FindObjectOfType<AudioManager>();
 
@@ -52,7 +54,12 @@ public class TriggerManager : MonoBehaviour
         fadeScreen = false;
     }
 
-    private void Update()
+    void Start()
+    {
+        StartOfGame();
+    }
+
+    void Update()
     {
         Level_1();
     }
@@ -86,6 +93,7 @@ public class TriggerManager : MonoBehaviour
                 audioManager.Play("Scare");
                 mainCamera.enabled = false;
                 Invoke("SwitchCams", 2);
+                Invoke("MovePlayer", 2);
             }
 
             if (gameObject.name == "Voices_Bear")
@@ -134,6 +142,22 @@ public class TriggerManager : MonoBehaviour
         }
     }
 
+    void StartOfGame()
+    {
+        playerM.speed = 0f;
+        var tempColor = blackScreen.color;
+        tempColor.a = 1f;
+        blackScreen.color = tempColor;
+        audioManager.Play("Start");
+        Invoke("FadeScreen", 26);
+        Invoke("Follow", 26);
+    }
+
+    void Follow()
+    {
+        audioManager.Play("Follow");
+    }
+
     void StopEnd()
     {
         audioManager.Play("BOOM");
@@ -173,6 +197,7 @@ public class TriggerManager : MonoBehaviour
     void FadeScreen()
     {
         fadeScreen = true;
+        playerM.speed = 6f;
     }
 
     void Level_1()
@@ -181,8 +206,10 @@ public class TriggerManager : MonoBehaviour
         {
             //print("Fade Black Screen");
             var tempColor = blackScreen.color;
-            player.transform.position = startPoint.transform.position;
-            mainCamera.enabled = true;
+            if(mainCamera.enabled == false)
+            {
+                mainCamera.enabled = true;
+            }
 
             if (tempColor.a != 0f)
             {
@@ -197,6 +224,11 @@ public class TriggerManager : MonoBehaviour
             }
             blackScreen.color = tempColor;
         }
+    }
+
+    void MovePlayer()
+    {
+        player.transform.position = startPoint.transform.position;
     }
 
     void Destroy()
