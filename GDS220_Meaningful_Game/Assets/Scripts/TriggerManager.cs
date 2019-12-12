@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class TriggerManager : MonoBehaviour
 {
     private LevelOptimisation lvlOP;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     private PlayerMovement playerM;
+    private SceneChange sceneChange;
 
     public GameObject son;
     public GameObject pyre;
@@ -27,6 +28,7 @@ public class TriggerManager : MonoBehaviour
 
     void Awake()
     {
+        sceneChange = FindObjectOfType<SceneChange>();
         playerM = FindObjectOfType<PlayerMovement>();
         lvlOP = FindObjectOfType<LevelOptimisation>();
         audioManager = FindObjectOfType<AudioManager>();
@@ -233,7 +235,6 @@ public class TriggerManager : MonoBehaviour
 
     void Destroy()
     {
-
         son.SetActive(false);
     }
 }
