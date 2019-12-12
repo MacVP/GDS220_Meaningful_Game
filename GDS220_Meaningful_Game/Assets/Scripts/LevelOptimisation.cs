@@ -35,6 +35,7 @@ public class LevelOptimisation : MonoBehaviour
     {
         startLevelA.SetActive(false);
         startLevelB.SetActive(false);
+        level_1A.SetActive(true);
     }
 
     void OnTriggerEnter(Collider other)

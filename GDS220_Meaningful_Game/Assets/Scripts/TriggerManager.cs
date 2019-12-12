@@ -22,7 +22,6 @@ public class TriggerManager : MonoBehaviour
     public GameObject startPoint;
     public Image blackScreen;
     private bool fadeScreen;
-    private float fadeRate = 0.1f;
 
     public GameObject pPHolster;
 
@@ -146,22 +145,32 @@ public class TriggerManager : MonoBehaviour
 
     void StartOfGame()
     {
-        playerM.speed = 0f;
-        var tempColor = blackScreen.color;
-        tempColor.a = 1f;
-        blackScreen.color = tempColor;
-        audioManager.Play("Start");
-        Invoke("FadeScreen", 26);
-        Invoke("Follow", 26);
+        if(sceneChange.started == false)
+        {
+            playerM.speed = 0f;
+            var tempColor = blackScreen.color;
+            tempColor.a = 1f;
+            blackScreen.color = tempColor;
+            audioManager.Play("Start");
+            Invoke("FadeScreen", 2);
+            Invoke("Follow", 2);
+        }
+        else
+        {
+            return;
+        }
+
     }
 
     void Follow()
     {
         audioManager.Play("Follow");
+        sceneChange.started = true;
     }
 
     void StopEnd()
     {
+        print("BLACK SCREEN StopEnd");
         audioManager.Play("BOOM");
         audioManager.Stop("Violin");
         audioManager.Stop("Suspence");
@@ -186,16 +195,17 @@ public class TriggerManager : MonoBehaviour
 
     void SwitchCams()
     {
+        print("BLACK SCREEN");
         audioManager.Stop("Suspence");
         audioManager.Play("BOOM");
 
         var tempColor = blackScreen.color;
         tempColor.a = 1f;
         blackScreen.color = tempColor;
-        player.transform.position = startPoint.transform.position;
-        lvlOP.StartLevelStop();
-        Invoke("FadeScreen", 9);
+        lvlOP.StartLevelStop();    
+        Invoke("FadeScreen", 7);
         Invoke("PlayWakeUp", 7);
+        Invoke("MovePlayer", 6);
     }
 
     void PlayWakeUp()
@@ -207,6 +217,7 @@ public class TriggerManager : MonoBehaviour
     {
         fadeScreen = true;
         playerM.speed = 6f;
+        player.transform.position = startPoint.transform.position;
     }
 
     void Level_1()
@@ -244,4 +255,10 @@ public class TriggerManager : MonoBehaviour
     {
         son.SetActive(false);
     }
+
+    public void ScreenCheck()
+    {
+        blackScreen.gameObject.SetActive(false);
+    }
+
 }

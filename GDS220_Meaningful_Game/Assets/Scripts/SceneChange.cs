@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public bool started = false;
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);

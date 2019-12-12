@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableManager : MonoBehaviour
 {
     private LevelOptimisation lvlOP;
+    private TriggerManager trigger;
 
     public GameObject player;
     public GameObject berries;
@@ -16,6 +18,7 @@ public class InteractableManager : MonoBehaviour
 
     private void Awake()
     {
+        trigger = FindObjectOfType<TriggerManager>();
         lvlOP = FindObjectOfType<LevelOptimisation>();
     }
 
@@ -39,6 +42,7 @@ public class InteractableManager : MonoBehaviour
 
     public void TakeTeddyBear()
     {
+        //trigger.ScreenCheck();
         //Pick up Teddy Bear
         Debug.Log("Teddy Picked Up");
         teddyBear.SetActive(false);
