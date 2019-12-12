@@ -152,8 +152,8 @@ public class TriggerManager : MonoBehaviour
             tempColor.a = 1f;
             blackScreen.color = tempColor;
             audioManager.Play("Start");
-            Invoke("FadeScreen", 2);
-            Invoke("Follow", 2);
+            Invoke("FadeScreen", 26);
+            Invoke("Follow", 26);
         }
         else
         {
